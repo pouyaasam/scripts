@@ -23,7 +23,7 @@ case "$os_distro" in
   ubuntu|debian)
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
     sudo apt-get install speedtest -y
-    speedtest --accept-gdpr
+    speedtest
     ;;
   arch)
     yes | sudo pacman -Syu
@@ -33,7 +33,7 @@ case "$os_distro" in
   centos|rhel|fedora|almalinux)
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
     sudo yum -y install speedtest
-    speedtest --accept-gdpr
+    speedtest
     ;;
   *)
     echo "Unsupported OS distribution: $os_distro"
