@@ -26,8 +26,8 @@ case "$os_distro" in
     speedtest --accept-gdpr
     ;;
   arch)
-    yes |sudo pacman -Syu
-    yes |sudo pacman -S speedtest-cli
+    yes | sudo pacman -Syu
+    yes | sudo pacman -S speedtest-cli
     speedtest-cli
     ;;
   centos|rhel|fedora|alma)
