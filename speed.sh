@@ -26,11 +26,11 @@ case "$os_distro" in
     speedtest --accept-gdpr
     ;;
   arch)
-    echo "Installing on Debian..."
-    sudo apt-get update
-    sudo apt-get install -y <package_name>
+    yes |sudo pacman -Syu
+    yes |sudo pacman -S speedtest-cli
+    speedtest-cli
     ;;
-  centos|rhel|fedora)
+  centos|rhel|fedora|alma)
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
     sudo yum -y install speedtest
     speedtest --accept-gdpr
