@@ -23,17 +23,14 @@ case "$os_distro" in
   ubuntu|debian)
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
     sudo apt-get install speedtest -y
-    speedtest
     ;;
   arch)
     yes | sudo pacman -Syu
     yes | sudo pacman -S speedtest-cli
-    speedtest-cli
     ;;
   centos|rhel|fedora|almalinux)
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
     sudo yum -y install speedtest
-    speedtest
     ;;
   *)
     echo "Unsupported OS distribution: $os_distro"
