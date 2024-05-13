@@ -30,7 +30,7 @@ case "$os_distro" in
     yes | sudo pacman -S speedtest-cli
     speedtest-cli
     ;;
-  centos|rhel|fedora|alma)
+  centos|rhel|fedora|almalinx)
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash
     sudo yum -y install speedtest
     speedtest --accept-gdpr
